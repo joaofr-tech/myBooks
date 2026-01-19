@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/index.css">
     <title>myBooks</title>
 </head>
+
 <body>
     <header>
         <a href="/" class="logo">
@@ -14,11 +18,43 @@
             <span>Books</span>
         </a>
         <ul class="links">
-            <a href="#"><li>Ler</li></a>
-            <a href="#"><li>Lidos</li></a>
+            <a href="#">
+                <li>Ler</li>
+            </a>
+            <a href="#">
+                <li>Lidos</li>
+            </a>
+            <li class="adicionar-livro" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">Adicionar</li>
         </ul>
     </header>
     <main>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">LIVRO</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <label for="" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nome-livro">
+                            <label for="" class="form-label">Autor</label>
+                            <input type="text" class="form-control" id="autor-livro">
+                            <label for="" class="form-label">Ano</label>
+                            <input type="text" class="form-control" id="ano-livro">
+                            <label for="" class="form-label">Página</label>
+                            <input type="text" class="form-control" id="pag-livro">
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="modal-btn-save" id="cadastro">Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <section class="quote-container">
             <div class="card-quote">
                 <p>Mostre-me uma família de leitores, e lhe mostrarei o povo que dirigirá o mundo.</p>
@@ -39,73 +75,79 @@
         </section>
 
         <section class="cards-container">
-    <div class="cards-livros">
-        <div class="card-header"></div>
-        <div class="card-content">
-            <h3>Clean Code</h3>
-            <p><strong>Autor:</strong> Robert C. Martin</p>
-            <div class="card-info">
-                <span class="info-item">📅 2008</span>
-                <span class="info-item">📄 ~464 págs</span>
+            <div class="cards-livros">
+                <div class="card-header"></div>
+                <div class="card-content">
+                    <h3>Clean Code</h3>
+                    <p><strong>Autor:</strong> Robert C. Martin</p>
+                    <div class="card-info">
+                        <span class="info-item">📅 2008</span>
+                        <span class="info-item">📄 ~464 págs</span>
+                    </div>
+                    <div class="tags">
+                        <span>#Programação</span>
+                        <span>#Tech</span>
+                    </div>
+                </div>
             </div>
-            <div class="tags">
-                <span>#Programação</span>
-                <span>#Tech</span>
+
+            <div class="cards-livros">
+                <div class="card-header"></div>
+                <div class="card-content">
+                    <h3>O Programador Pragmático</h3>
+                    <p><strong>Autor:</strong> Andrew Hunt, David Thomas</p>
+                    <div class="card-info">
+                        <span class="info-item">📅 1999</span>
+                        <span class="info-item">📄 ~352 págs</span>
+                    </div>
+                    <div class="tags">
+                        <span>#Programação</span>
+                        <span>#Carreira</span>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    
-    <div class="cards-livros">
-        <div class="card-header"></div>
-        <div class="card-content">
-            <h3>O Programador Pragmático</h3>
-            <p><strong>Autor:</strong> Andrew Hunt, David Thomas</p>
-            <div class="card-info">
-                <span class="info-item">📅 1999</span>
-                <span class="info-item">📄 ~352 págs</span>
+
+            <div class="cards-livros">
+                <div class="card-header"></div>
+                <div class="card-content">
+                    <h3>Vida 3.0</h3>
+                    <p><strong>Autor:</strong> Max Tegmark</p>
+                    <div class="card-info">
+                        <span class="info-item">📅 2017</span>
+                        <span class="info-item">📄 ~384 págs</span>
+                    </div>
+                    <div class="tags">
+                        <span>#IA</span>
+                        <span>#Futuro</span>
+                    </div>
+                </div>
             </div>
-            <div class="tags">
-                <span>#Programação</span>
-                <span>#Carreira</span>
+
+            <div class="cards-livros">
+                <div class="card-header"></div>
+                <div class="card-content">
+                    <h3>14 Hábitos de Desenvolvedores Altamente Produtivos</h3>
+                    <p><strong>Autor:</strong> Zeno Rocha</p>
+                    <div class="card-info">
+                        <span class="info-item">📅 2015</span>
+                        <span class="info-item">📄 ~120 págs</span>
+                    </div>
+                    <div class="tags">
+                        <span>#Produtividade</span>
+                        <span>#Dev</span>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    
-    <div class="cards-livros">
-        <div class="card-header"></div>
-        <div class="card-content">
-            <h3>Vida 3.0</h3>
-            <p><strong>Autor:</strong> Max Tegmark</p>
-            <div class="card-info">
-                <span class="info-item">📅 2017</span>
-                <span class="info-item">📄 ~384 págs</span>
-            </div>
-            <div class="tags">
-                <span>#IA</span>
-                <span>#Futuro</span>
-            </div>
-        </div>
-    </div>
-    
-    <div class="cards-livros">
-        <div class="card-header"></div>
-        <div class="card-content">
-            <h3>14 Hábitos de Desenvolvedores Altamente Produtivos</h3>
-            <p><strong>Autor:</strong> Zeno Rocha</p>
-            <div class="card-info">
-                <span class="info-item">📅 2015</span>
-                <span class="info-item">📄 ~120 págs</span>
-            </div>
-            <div class="tags">
-                <span>#Produtividade</span>
-                <span>#Dev</span>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
     </main>
     <footer>
         <p>© 2026 João Francisco. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+    <script src="/js/scripts.js"></script>
 </body>
+
 </html>
